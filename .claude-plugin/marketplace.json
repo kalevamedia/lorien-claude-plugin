@@ -1,0 +1,19 @@
+{
+  "name": "lorien",
+  "description": "Kaleva Media's plugins for Claude Code — Lorien developer-platform tooling.",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Kaleva Media",
+    "url": "https://kalevamedia.fi"
+  },
+  "plugins": [
+    {
+      "name": "lorien-claude-plugin",
+      "source": {
+        "source": "github",
+        "repo": "kalevamedia/lorien-claude-plugin"
+      },
+      "description": "MCP tools and skills for the Lorien developer portal."
+    }
+  ]
+}

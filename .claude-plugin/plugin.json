@@ -1,0 +1,23 @@
+{
+  "name": "lorien-claude-plugin",
+  "version": "0.1.0",
+  "description": "MCP tools for Lorien, Kaleva Media's publishing platform. Search and read the developer portal from Claude Code; live API tools to follow.",
+  "author": {
+    "name": "Kaleva Media",
+    "url": "https://kalevamedia.fi"
+  },
+  "homepage": "https://developers.loriencms.com",
+  "repository": "https://github.com/kalevamedia/lorien-claude-plugin",
+  "license": "Apache-2.0",
+  "mcpServers": {
+    "lorien-docs": {
+      "type": "http",
+      "url": "https://lorien-docs-mcp-kld8gbve4h.gateway.bedrock-agentcore.eu-central-1.amazonaws.com/mcp",
+      "oauth": {
+        "clientId": "7XZgNieHv9uuOc6n",
+        "callbackPort": 33418,
+        "scopes": "openid profile email offline_access"
+      }
+    }
+  }
+}
