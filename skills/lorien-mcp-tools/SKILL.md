@@ -33,8 +33,8 @@ Tips:
 List pages on the portal, optionally filtered by slug prefix. Returns `{ prefix, pages: [{ slug, title, summary }], count }`.
 
 Tips:
-- Use when the user wants to browse what exists ("what's documented about the Management API?"). Take the prefix from the first path segment of a search hit's slug.
-- The listing is capped at 200 pages, sorted by slug. When more matched, the result also carries `total`, `truncated: true` and a `note`; narrow with a longer prefix. An empty prefix stops partway through the alphabet and does not reveal every section, so it is not a way to see the whole portal.
+- Use when the user wants to browse what exists ("what's documented about the Management API?"). An empty prefix shows every section's guide and overview pages, so it is also the way to find a section's prefix: the first path segment of its slugs.
+- The listing is capped at 200 pages: guide and overview pages first, then API reference pages, each sorted by slug. When more matched, the result also carries `total`, `truncated: true` and a `note`; narrow with a longer prefix. To browse a section's reference pages, list a group under its `reference` path.
 
 ## Recommended call sequences
 
@@ -42,7 +42,7 @@ Tips:
 |------|------------------|
 | "Find the page about X" | `lorien_docs_search` → maybe `lorien_docs_get_page` on top hit |
 | "Summarise page X for me" | `lorien_docs_get_page` directly if you already have the slug |
-| "What's documented under X area?" | `lorien_docs_search` for X to get a slug, then `lorien_docs_list_pages` with that slug's first path segment |
+| "What's documented under X area?" | `lorien_docs_list_pages` with that section's prefix; with an empty prefix first if you don't know the section |
 | "Write integration code for X" | `lorien_docs_search` for X, then `lorien_docs_get_page` on the guide and the reference page, then write |
 
 ## Authentication
