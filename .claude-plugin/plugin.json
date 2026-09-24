@@ -1,6 +1,6 @@
 {
   "name": "lorien-claude-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP tools for Lorien, Kaleva Media's publishing platform. Search and read the developer portal from Claude Code; live API tools to follow.",
   "author": {
     "name": "Kaleva Media",
